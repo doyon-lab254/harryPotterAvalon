@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:harry_potter_avalon/src/game/screen/home_screen.dart';
+import 'package:harry_potter_avalon/src/game/screen/game_screen.dart';
 import 'package:harry_potter_avalon/src/home/screen/home_screen.dart';
 
 class App extends StatelessWidget {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter_avalon/src/constants.dart';
+import 'package:harry_potter_avalon/src/game/model/member_count_model.dart';
+import 'package:harry_potter_avalon/src/game/screen/game_screen.dart';
 import 'package:harry_potter_avalon/src/home/widget/home_text_widget.dart';
 import 'package:harry_potter_avalon/src/home/widget/member_count_selector_group_widget.dart';
 
@@ -33,8 +35,11 @@ class _MemberCountSection extends State<MemberCountSection> {
                     Size(MediaQuery.of(context).size.width, kButtonHeight))),
             child: const HomeTextWidget(text: "게임시작하기"),
             onPressed: () {
-              debugPrint(
-                  "selectedMemberCount" + selectedMemberCount.toString());
+              Navigator.pushNamed(
+                context,
+                GameScreen.routeName,
+                arguments: MemberCountModel(memberNumber: selectedMemberCount),
+              );
             },
           ),
         ],
